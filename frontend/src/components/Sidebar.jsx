@@ -3,6 +3,7 @@ import { CgProfile } from 'react-icons/cg'
 import { FaHome, FaVideo } from 'react-icons/fa'
 import { FiLogOut } from 'react-icons/fi'
 import { IoSettingsSharp } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 
 const Sidebar = ({sidebarToggle}) => {
@@ -14,38 +15,38 @@ const Sidebar = ({sidebarToggle}) => {
       <hr />
       <ul className='mt-3 text-white font-bold'>
         <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-          <a href='' className='px-3'>
+          <Link to='/' className='px-3'>
               <FaHome className='inline-block w-6 h-6 mr-2 -mt-2'></FaHome>
               Home
-          </a>
+          </Link>
         </li>
 
         <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-          <a href='' className='px-3'>
+          <Link to='/Profile' className='px-3'>
               <CgProfile className='inline-block w-6 h-6 mr-2 -mt-2'></CgProfile>
               Profile
-          </a>
+          </Link>
         </li>
 
         <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-          <a href='' className='px-3'>
+          <Link to='/Rooms' className='px-3'>
               <FaVideo className='inline-block w-6 h-5 mr-2 -mt-2'></FaVideo>
               Create Room
-          </a>
+          </Link>
         </li>
 
         <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-          <a href='' className='px-3'>
+          <Link to='/Settings' className='px-3'>
               <IoSettingsSharp className='inline-block w-6 h-6 mr-2 -mt-2'></IoSettingsSharp>
               Setting
-          </a>
+          </Link>
         </li>
 
         <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-          <a href='' className='px-3'>
+          <Link to='/' className='px-3'>
               <FiLogOut className='inline-block w-6 h-6 mr-2 -mt-2'></FiLogOut>
               Log Out
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

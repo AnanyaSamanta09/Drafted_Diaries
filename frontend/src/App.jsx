@@ -1,29 +1,21 @@
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import { useState } from 'react';
 import './App.css'
-import Posts from './components/Posts';
-import Navbar from './components/Navbar'
-
+import { Route, Routes } from "react-router-dom";
+import Home from './components/Home';
+import Profile from './components/Profile';
+import Rooms from './components/Rooms';
+import Settings from './components/Settings';
 
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(false)
-  return (
-    <div>
-        <Navbar 
-        sidebarToggle={sidebarToggle}
-        setSidebarToggle={setSidebarToggle}/>
-    <div className='flex'>
-      
-      <Sidebar sidebarToggle={sidebarToggle}/>
-      <Dashboard 
-      sidebarToggle={sidebarToggle}
-      setSidebarToggle={setSidebarToggle}
-      />
-      <Posts />
-    </div>
-    </div>
-  )
+    return (
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Rooms" element={<Rooms />} />
+          <Route path="/Settings" element={<Settings />} />
+        </Routes>
+      </div>
+    )
 }
 
 export default App;
